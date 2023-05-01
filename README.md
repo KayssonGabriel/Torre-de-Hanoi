@@ -1,2 +1,2 @@
-# Torre-de-Hanoi
+# Torre de Hanói
 https://youtu.be/WrWZXIDYvW4
