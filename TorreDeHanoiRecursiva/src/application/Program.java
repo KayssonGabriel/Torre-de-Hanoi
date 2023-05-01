@@ -12,8 +12,17 @@ public class Program {
 		TowerOfHanoi torre = new TowerOfHanoi();
 
 		System.out.println("Digite a quantidade de discos: ");
+		if (!sc.hasNextInt()) {
+			System.err.println("Informe uma quantidade inteira de discos.");
+			sc.close();
+			return;
+		}
 		int quantidade = sc.nextInt();
 		sc.close();
+		if (quantidade < 0 || quantidade >= Long.SIZE) {
+			System.err.println("A quantidade de discos deve estar entre 0 e 63.");
+			return;
+		}
 
 
 		long startTime = System.currentTimeMillis();
